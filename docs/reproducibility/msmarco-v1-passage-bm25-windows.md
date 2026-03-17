@@ -1,19 +1,17 @@
-# Reproduction Log: BM25 Retrieval on MS MARCO v1 Passage
+This PR adds my reproduction log entry for the Pyserini BM25 baseline reproduction.
 
-## Environment
-OS: Windows 10  
-Python: 3.14.3  
-Java: OpenJDK 21 (Temurin)
+Environment:
+OS: Windows 10
+Python: 3.11
+Java: OpenJDK 21
 
-## Retrieval Command
-python -m pyserini.search.lucene --index msmarco-v1-passage --topics msmarco-passage-dev-subset --output run.msmarco.txt --bm25 --output-format msmarco
+Steps completed:
 
-## Evaluation Command
-python -m pyserini.eval.msmarco_passage_eval msmarco-passage-dev-subset run.msmarco.txt
+    Ran Pyserini BM25 search on msmarco-passage-dev-subset
+    Evaluated results using msmarco_passage_eval
 
-## Result
-MRR@10 = 0.1874  
-QueriesRanked = 6980
+Result:
+MRR @10 = 0.18741227770955546
+QueriesRanked: 6980
 
-## Notes
-Experiment reproduced successfully on Windows.
+banana odyssey
